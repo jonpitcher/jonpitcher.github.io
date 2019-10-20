@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+
+		button{
+
+			width: 100px;
+			height: 100px;
+		}
+	
+	div{
+
+		float: left;
+
+		margin-right: 20px;
+	}
+
+</style>
+
+<script type="text/javascript">
+	
+	var p1InnerHTML = 5; 
+
+	var myArr = ["ni", "shuo", "zhong", "wen", "ma"];
+
+	var x1= 0;
+	var x2= 0;
+	var x3= 0;
+	var x4= 0;
+	var x5= 0; 
+
+	function myfunction1(){
+
+		
+		document.getElementById("p1").innerHTML = myArr[x1];
+		x1++;
+
+		if (x1>4) {
+
+			x1=0; 
+		}
+		
+
+}
+		
+	
+
+	function myfunction2(){
+		
+		document.getElementById("p2").innerHTML = myArr[x2];
+		x2++;
+
+		if (x2>4) {
+
+			x2=0; 
+		}
+	}
+
+	function myfunction3(){
+		
+		document.getElementById("p3").innerHTML = myArr[x3];
+		x3++;
+
+		if (x3>4) {
+
+			x3=0; 
+		}
+
+	}
+
+	function myfunction4(){
+
+		document.getElementById("p4").innerHTML = myArr[x4];
+		x4++;
+
+		if (x4>4) {
+
+			x4=0; 
+		}
+
+	}
+
+	function myfunction5(){
+
+		document.getElementById("p5").innerHTML = myArr[x5];
+		x5++;
+
+
+			if ( x1 == 1 && x2 == 2 && x3 == 3 && x4 == 4 && x5 == 5 ){
+
+	//== "ni" && myArr[x2] == "shuo" && myArr[x3] == "zhong" && myArr[x4] == "wen" && myArr[x5] == "ma" ) {
+
+	alert("Good job!");
+	document.getElementById("myH").innerHTML = "Correct!";
+
+
+} else if(x5>4) {
+
+			x5=0; 
+		}
+
+		
+}
+
+
+function myfunction6(){
+
+
+	for (var i = 0 ; i < myArr.length; i++) {
+	
+	var para = document.createElement("button");
+
+	//var node = document.createTextNode("This is a new paragraph.");
+
+	//para.appendChild(node);
+
+	var element= document.getElementById("div1");
+
+	element.appendChild(para);
+
+
+}
+}
+
+
+
+
+		
+//function ifFunction(){
+
+//if ( myArr[x1] =="ni" ){
+
+	//== "ni" && myArr[x2] == "shuo" && myArr[x3] == "zhong" && myArr[x4] == "wen" && myArr[x5] == "ma" ) {
+
+	//document.getElementById("myH").innerHTML="good";
+
+//} else{
+
+	//document.getElementById("myH").innerHTML="bad";
+//}
+//
+//}
+
+</script>
+</head>
+<body>
+
+
+	<div>
+		
+		<p id="p1">_____ &nbsp; </p>
+
+	</div>
+
+	<div>
+		
+		<p id="p2">_____ &nbsp; </p>
+		
+	</div>
+
+	<div>
+		
+		<p id="p3">_____ &nbsp; </p>
+		
+	</div>
+
+	<div>
+		
+		<p id="p4">_____ &nbsp; </p>
+		
+	</div>
+
+	<div>
+		
+		<p id="p5">_____ &nbsp; </p>
+		
+	</div>
+
+	<h1 id="myH"></h1>
+
+	<br><br>
+
+	<div>
+		
+<button onclick="myfunction1();">btn1</button>
+<button onclick="myfunction2();">btn2</button>
+<button onclick="myfunction3();">btn3</button>
+<button onclick="myfunction4();">btn4</button>
+<button onclick="myfunction5();">btn5</button>
+
+</div>
+
+<br><br>
+
+<div id="div1">
+
+<button onclick="myfunction6();">btn6</button>
+
+</div>
+
+</body>
+</html>

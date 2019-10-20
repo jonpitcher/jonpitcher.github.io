@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+		button{
+
+			font-size: 20px;
+		}
+		
+		#person{
+
+			position: absolute;
+			bottom: 10px;
+			height: 125px;
+			width: 125px;
+			right: 125px;
+			background-color: blue;
+		}
+
+		#person2{
+
+			position: absolute;
+			bottom: 10px;
+			height: 125px;
+			width: 125px;
+			right: 125px;
+			background-color: red;
+		}
+
+		#firstPlayerButtons{
+
+			position: absolute;
+			bottom: 10px; 
+			height: 100px;
+			width: 120px;
+			background-color: blue;
+		}
+
+		#secondPlayerButtons{
+
+			position: absolute;
+			bottom: 10px; 
+			height: 100px;
+			width: 120px;
+			right: 10px;
+			background-color: red;
+		}
+
+		#floatLeft{
+
+			float: right;
+		}
+
+		#floatRight{
+
+			float: left;
+		}
+
+		#floatCenter{
+
+			margin-left: 40px;
+
+		}
+
+		#floatLeft2{
+
+			float: right;
+		}
+
+		#floatRight2{
+
+			float: left;
+		}
+
+		#floatCenter2{
+
+			margin-left: 40px;
+
+		}
+
+#word1{
+
+			float: left;
+			background-color: turquoise;
+			margin-right: 120px;
+
+		}
+#word2{
+
+			float: left;
+			background-color: orange;
+			margin-right: 120px;
+		}
+#word3{
+
+			float: left;
+			background-color: yellow;
+			margin-right: 150px;
+		}
+#word4{
+
+			float: left;
+			background-color: pink;
+			margin-right: 150px;
+		}
+
+
+	</style>
+
+	<script type="text/javascript">
+
+	
+		var heightBtn = 50;
+		var heightImg= 10; 
+		var imageWidth= 500; 
+
+		var heightBtn2 = 50;
+		var heightImg2= 10; 
+		var imageWidth2= 500; 
+		//   ???????? v2ar q = document.getElementById("mybtn"); 
+
+		
+
+			function moveImageUp(argument) {
+			
+			var q = document.getElementById("person");
+			heightImg += 5; 
+			var myString= heightImg.toString() + "px";
+			q.style.bottom= myString;
+
+		}
+
+			function moveImageDown(argument) {
+			
+			var q = document.getElementById("person");
+			heightImg -= 5; 
+			var myString= heightImg.toString() + "px";
+			q.style.bottom= myString;
+
+		}
+
+		function moveImageRight(argument) {
+			
+			var q = document.getElementById("person");
+			imageWidth -= 10; 
+			var myString= imageWidth.toString() + "px";
+			q.style.right= myString;
+
+		}
+
+		function moveImageLeft(argument) {
+			
+			var q = document.getElementById("person");
+			imageWidth += 5; 
+			var myString= imageWidth.toString() + "px";
+			q.style.right= myString;
+
+		}
+
+		function changeWords(){
+
+			var myprompt2= prompt("Are you the teacher");
+			if (myprompt2=="y") {
+			var myprompt = prompt("What words").split(" ");
+
+			document.getElementById("hword1").innerHTML= myprompt[0];
+			document.getElementById("hword2").innerHTML= myprompt[1];
+			document.getElementById("hword3").innerHTML= myprompt[2];
+			document.getElementById("hword4").innerHTML= myprompt[3];
+		}
+		}
+		
+
+		function moveImageUp2(argument) {
+			
+			var q = document.getElementById("person2");
+			heightImg2 += 5; 
+			var myString= heightImg2.toString() + "px";
+			q.style.bottom= myString;
+
+		}
+
+			function moveImageDown2(argument) {
+			
+			var q = document.getElementById("person2");
+			heightImg2 -= 10; 
+			var myString= heightImg2.toString() + "px";
+			q.style.bottom= myString;
+
+		}
+
+		function moveImageRight2(argument) {
+			
+			var q = document.getElementById("person2");
+			imageWidth2 -= 5; 
+			var myString= imageWidth2.toString() + "px";
+			q.style.right= myString;
+
+		}
+
+		function moveImageLeft2(argument) {
+			
+			var q = document.getElementById("person2");
+			imageWidth2 += 5; 
+			var myString= imageWidth2.toString() + "px";
+			q.style.right= myString;
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		function FUNCTIONDONTUSEFROMEXPERIMENT(argument){
+			var q = document.getElementById("mybtn");
+			heightBtn += 5 ; 
+			var myString= heightBtn.toString() + "px";
+			q.style.height= myString;
+
+		}
+
+		//do you need an object for when it changes javascript...???
+
+
+/*
+		don't understand variables here the 
+
+		var x = document.getElementById("mybtn");
+
+		works inside of the function but doesnt workoutside if its a global variable outside of the function...
+
+		but number does work saved outside of the function
+
+
+
+
+
+
+to increase it by any number and have it save you need the += no other way 
+
+
+
+onclick want to functions to happen if either so i dont have to repeat myself a million times... 
+
+
+*/
+	</script>
+</head>
+<body>
+
+	<div id="word1"> <h1 id="hword1">rock</h1></div>
+	<div id="word2"> <h1 id="hword2">tree</h1></div>
+	<div id="word3"> <h1 id="hword3">stone</h1></div>
+	<div id="word4"> <h1 id="hword4">laugh</h1></div>
+
+
+<div id="firstPlayerButtons">
+
+<button id="floatCenter" onclick="moveImageUp();">Up</button>
+<br>
+<button id="floatLeft" onclick="moveImageRight();">Right</button>
+<button id="floatRight" onclick="moveImageLeft();">Left</button>
+<br>
+<button id="floatCenter" onclick="moveImageDown();">Down</button>
+
+</div>
+
+<div id="secondPlayerButtons">
+
+<button id="floatCenter2" onclick="moveImageUp2();">Up</button>
+<br>
+<button id="floatLeft2" onclick="moveImageRight2();">Right</button>
+<button id="floatRight2" onclick="moveImageLeft2();">Left</button>
+<br>
+<button id="floatCenter2" onclick="moveImageDown2();" >Down</button>
+
+</div>
+
+<img src="C:\Users\Jon\Desktop\person.png" id="person">
+
+<img src="C:\Users\Jon\Desktop\person.png" id="person2">
+
+
+<div id="teacher password" onclick="changeWords();">T</div>
+</body>
+</html>

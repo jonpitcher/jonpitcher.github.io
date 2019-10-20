@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		#div2{
+
+			margin-left: 5px;
+		}
+
+
+		#div3{
+
+			margin-left: 50px;
+		}
+
+		#bigDiv{
+
+			float: left;
+			margin-right:50px;
+		}
+
+		#delete{
+
+			background-color: red;
+		}
+
+		#delete2{
+
+			background-color: red;
+		}
+
+		button{
+
+			width: 50px; 
+			height: 50px;
+			margin-bottom:5px;
+		}
+	</style>
+	<script type="text/javascript">
+
+
+		var myArray= [];
+		var myArray2= [];
+	
+
+		function myfunctionZ(selectedId){
+
+			myArray.push(selectedId);
+			var finalArray = myArray.join('');
+			document.getElementById("myP").innerHTML= finalArray;
+
+
+			document.getElementById("delete").onclick= function(){
+			myArray.pop();
+			var newArray = myArray.join('')
+			document.getElementById("myP").innerHTML= newArray;
+			 }
+
+
+		}
+
+		function myfunctionX(selectedId){
+
+			myArray2.push(selectedId);
+			var finalArray2 = myArray2.join('');
+			document.getElementById("myP2").innerHTML= finalArray2;
+			
+
+			document.getElementById("delete2").onclick= function(){
+			myArray2.pop();
+			var newArray2 = myArray2.join('')
+			document.getElementById("myP2").innerHTML= newArray2;
+			 }
+			}
+
+			//function myfunctionDelete(){
+
+		 // document.getElementById("delete").onclick= function(){
+			//alert("yay"); }	}	
+	
+		
+
+
+		//problem is it is in a sequence so each time i need to change the innerHTML for each element but need to move on to the next one... issue is is that it needs to know that the first button has already been selected... 
+
+		//if the value of i goes up i++ then the value of that determines where the button will go then...???? could just be appending an array each time and then just showing the array probably the easiest... 
+
+		//so i basically want to put run the function and then get the letter from the button being pushed but how would I go about doing that... .
+
+		
+	</script>
+</head>
+<body>
+
+	<div id="bigDiv">
+
+
+	<p id="myP">___</p>
+
+	<div>
+
+	<button id="q" onclick="myfunctionZ(this.id);">Q</button>
+	<button id="w" onclick="myfunctionZ(this.id);">W</button>
+	<button id="e" onclick="myfunctionZ(this.id);">E</button>
+	<button id="r" onclick="myfunctionZ(this.id);">R</button>
+	<button id="t" onclick="myfunctionZ(this.id);">T</button>
+	<button id="y" onclick="myfunctionZ(this.id);">Y</button>
+	<button id="u" onclick="myfunctionZ(this.id);">U</button>
+	<button id="i" onclick="myfunctionZ(this.id);">I</button>
+	<button id="o" onclick="myfunctionZ(this.id);">O</button>
+	<button id="p" onclick="myfunctionZ(this.id);">P</button>
+
+</div>
+
+<div id="div2">
+
+	<button id="a" onclick="myfunctionZ(this.id);">A</button>
+	<button id="s" onclick="myfunctionZ(this.id);">S</button>
+	<button id="d" onclick="myfunctionZ(this.id);">D</button>
+	<button id="f" onclick="myfunctionZ(this.id);">F</button>
+	<button id="g" onclick="myfunctionZ(this.id);">G</button>
+	<button id="h" onclick="myfunctionZ(this.id);">H</button>
+	<button id="j" onclick="myfunctionZ(this.id);">J</button>
+	<button id="k" onclick="myfunctionZ(this.id);">K</button>
+	<button id="l" onclick="myfunctionZ(this.id);">L</button>
+
+</div>
+
+<div id="div3">
+
+	<button id="z" onclick="myfunctionZ(this.id);">Z</button>
+	<button id="x" onclick="myfunctionZ(this.id);">X</button>
+	<button id="c" onclick="myfunctionZ(this.id);">C</button>
+	<button id="v" onclick="myfunctionZ(this.id);">V</button>
+	<button id="b" onclick="myfunctionZ(this.id);">B</button>
+	<button id="n" onclick="myfunctionZ(this.id);">N</button>
+	<button id="m" onclick="myfunctionZ(this.id);">M</button>
+
+<br>
+
+<button id="delete" onclick="myfunctionDelete();">DEL</button>
+
+</div>
+
+</div>
+
+<div id="bigDiv">
+
+
+	<p id="myP2">___</p>
+
+	<div>
+
+	<button id="q" onclick="myfunctionX(this.id);">Q</button>
+	<button id="w" onclick="myfunctionX(this.id);">W</button>
+	<button id="e" onclick="myfunctionX(this.id);">E</button>
+	<button id="r" onclick="myfunctionX(this.id);">R</button>
+	<button id="t" onclick="myfunctionX(this.id);">T</button>
+	<button id="y" onclick="myfunctionX(this.id);">Y</button>
+	<button id="u" onclick="myfunctionX(this.id);">U</button>
+	<button id="i" onclick="myfunctionX(this.id);">I</button>
+	<button id="o" onclick="myfunctionX(this.id);">O</button>
+	<button id="p" onclick="myfunctionX(this.id);">P</button>
+
+</div>
+
+<div id="div2">
+
+	<button id="a" onclick="myfunctionX(this.id);">A</button>
+	<button id="s" onclick="myfunctionX(this.id);">S</button>
+	<button id="d" onclick="myfunctionX(this.id);">D</button>
+	<button id="f" onclick="myfunctionX(this.id);">F</button>
+	<button id="g" onclick="myfunctionX(this.id);">G</button>
+	<button id="h" onclick="myfunctionX(this.id);">H</button>
+	<button id="j" onclick="myfunctionX(this.id);">J</button>
+	<button id="k" onclick="myfunctionX(this.id);">K</button>
+	<button id="l" onclick="myfunctionX(this.id);">L</button>
+
+</div>
+
+<div id="div3">
+
+	<button id="z" onclick="myfunctionX(this.id);">Z</button>
+	<button id="x" onclick="myfunctionX(this.id);">X</button>
+	<button id="c" onclick="myfunctionX(this.id);">C</button>
+	<button id="v" onclick="myfunctionX(this.id);">V</button>
+	<button id="b" onclick="myfunctionX(this.id);">B</button>
+	<button id="n" onclick="myfunctionX(this.id);">N</button>
+	<button id="m" onclick="myfunctionX(this.id);">M</button>
+
+	<br>
+
+	<button id="delete2" onclick="myfunctionDelete();">DEL</button>
+
+</div>
+
+
+
+</div>
+	
+</body>
+</html>
