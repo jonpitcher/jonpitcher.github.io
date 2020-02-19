@@ -1,0 +1,276 @@
+--"Macintosh HD:Users:user_directory:Desktop:Send_Mail:"
+
+(*
+set em1 to ""
+set em2 to ""
+set em3 to ""
+set em4 to ""
+set em5 to ""
+set em6 to ""
+
+
+Spain Feb 1
+set em1 to "info@famelanguages.com"
+set em2 to "info@fyneformacion.com"
+set em3 to "contacto@iberenglish.es"
+set em4 to "job@idiomasseif.com."
+set em5 to "Info@idmadrid.es"
+set em6 to "info.madrid@inlinguamadrid.com"
+
+set em1 to "cynthia2020@msn.com"
+set em2 to "Larry.davis19@yahoo.com"
+set em3 to "vst329@gmail.com"
+
+set em1 to "jordan.ty@msa.hinet.net "
+set em2 to "chongming@jordan.com.tw"
+set em3 to "cj_liao@hotmail.com"
+set em4 to "pp5217pp@yahoo.com.tw"
+set em5 to "jerry.p51@msa.hinet.net"
+
+
+
+
+
+Hello 
+
+My name is Jonathan, I saw your ad online looking for a native and qualified teacher for English, teaching is my passion and I am sure that I would be an excellent addition to your team. 
+
+I have a working holiday visa which will let me work in Spain so that will not be a problem. 
+
+I'm currently working as an English teacher in Cuenca and graduated with a degree in foreign languages in University. If you have any more questions about me feel free to contact me.
+
+Thank you for considering my application. 
+
+Jonathan Pitcher 
+
+--------------
+Taiwan Feb 2nd 
+
+
+
+*)
+
+set em1 to "daniel.td@msa.hinet.net"
+
+
+
+--0034911570734
+
+set bodyTxt to " 
+
+Good evening
+
+My name is Jonathan, I saw your ad online looking for a qualified teacher for English, teaching is my passion and I am confident that I would be an excellent addition to your team. I'm currently finishing my contract as an English teacher in Spain in a public High School with children that are between eleven to thirteen years old. I have a ticket to arrive in Taiwan at the beginning of June.
+
+I graduated with a bachelor's degree in foreign languages in University, after High School in the United States I decided to get my degree from Europe to have real life experience in another country and this helps me understand the challenges that English learners face when learning another language. My resume is attached to this email along with my diplomas, passport, cover letter and photo of myself in the same document. My Skype ID is live:6f78c623195ba614.
+
+Thank you for considering my application.
+
+Jonathan Pitcher
+
+
+  "
+
+
+
+--
+
+
+tell application "Finder"
+	set folderPath to folder "Macintosh HD:Users:Jon:Documents:DocumentsAll:AttachFiles"
+	set theFile to first file in folderPath as alias
+	set fileName to name of theFile
+	
+	
+end tell
+
+set theSubject to "American Teacher Resume"
+set theBody to bodyTxt
+set theAddress to em1
+set theAttachment to theFile
+set theSender to "jpmail589@gmail.com"
+
+tell application "Mail"
+	set theNewMessage to make new outgoing message with properties {subject:theSubject, content:theBody & return & return, visible:true}
+	tell theNewMessage
+		set visibile to true
+		set sender to theSender
+		make new to recipient at end of to recipients with properties {address:theAddress}
+		try
+			make new attachment with properties {file name:theAttachment} at after the last word of the last paragraph
+			set message_attachment to 0
+		on error errmess -- oops
+			log errmess -- log the error
+			set message_attachment to 1
+		end try
+		log "message_attachment = " & message_attachment
+		delay 10
+		send
+	end tell
+end tell
+
+tell application "Finder"
+	set folderPath to folder "Macintosh HD:Users:Jon:Documents:DocumentsAll:AttachFiles"
+	set theFile to first file in folderPath as alias
+	set fileName to name of theFile
+	
+	
+end tell
+
+set theSubject to "American Teacher Resume"
+set theBody to bodyTxt
+set theAddress to em2
+set theAttachment to theFile
+set theSender to "jpmail589@gmail.com"
+
+tell application "Mail"
+	set theNewMessage to make new outgoing message with properties {subject:theSubject, content:theBody & return & return, visible:true}
+	tell theNewMessage
+		set visibile to true
+		set sender to theSender
+		make new to recipient at end of to recipients with properties {address:theAddress}
+		try
+			make new attachment with properties {file name:theAttachment} at after the last word of the last paragraph
+			set message_attachment to 0
+		on error errmess -- oops
+			log errmess -- log the error
+			set message_attachment to 1
+		end try
+		log "message_attachment = " & message_attachment
+		delay 10
+		send
+	end tell
+end tell
+
+tell application "Finder"
+	set folderPath to folder "Macintosh HD:Users:Jon:Documents:DocumentsAll:AttachFiles"
+	set theFile to first file in folderPath as alias
+	set fileName to name of theFile
+	
+	
+end tell
+
+set theSubject to "American Teacher Resume"
+set theBody to bodyTxt
+set theAddress to em3
+set theAttachment to theFile
+set theSender to "jpmail589@gmail.com"
+
+tell application "Mail"
+	set theNewMessage to make new outgoing message with properties {subject:theSubject, content:theBody & return & return, visible:true}
+	tell theNewMessage
+		set visibile to true
+		set sender to theSender
+		make new to recipient at end of to recipients with properties {address:theAddress}
+		try
+			make new attachment with properties {file name:theAttachment} at after the last word of the last paragraph
+			set message_attachment to 0
+		on error errmess -- oops
+			log errmess -- log the error
+			set message_attachment to 1
+		end try
+		log "message_attachment = " & message_attachment
+		delay 10
+		send
+	end tell
+end tell
+
+tell application "Finder"
+	set folderPath to folder "Macintosh HD:Users:Jon:Documents:DocumentsAll:AttachFiles"
+	set theFile to first file in folderPath as alias
+	set fileName to name of theFile
+	
+	
+end tell
+
+set theSubject to "American Teacher Resume"
+set theBody to bodyTxt
+set theAddress to em4
+set theAttachment to theFile
+set theSender to "jpmail589@gmail.com"
+
+tell application "Mail"
+	set theNewMessage to make new outgoing message with properties {subject:theSubject, content:theBody & return & return, visible:true}
+	tell theNewMessage
+		set visibile to true
+		set sender to theSender
+		make new to recipient at end of to recipients with properties {address:theAddress}
+		try
+			make new attachment with properties {file name:theAttachment} at after the last word of the last paragraph
+			set message_attachment to 0
+		on error errmess -- oops
+			log errmess -- log the error
+			set message_attachment to 1
+		end try
+		log "message_attachment = " & message_attachment
+		delay 10
+		send
+	end tell
+end tell
+
+
+tell application "Finder"
+	set folderPath to folder "Macintosh HD:Users:Jon:Documents:DocumentsAll:AttachFiles"
+	set theFile to first file in folderPath as alias
+	set fileName to name of theFile
+	
+	
+end tell
+
+set theSubject to "American Teacher Resume"
+set theBody to bodyTxt
+set theAddress to em5
+set theAttachment to theFile
+set theSender to "jpmail589@gmail.com"
+
+tell application "Mail"
+	set theNewMessage to make new outgoing message with properties {subject:theSubject, content:theBody & return & return, visible:true}
+	tell theNewMessage
+		set visibile to true
+		set sender to theSender
+		make new to recipient at end of to recipients with properties {address:theAddress}
+		try
+			make new attachment with properties {file name:theAttachment} at after the last word of the last paragraph
+			set message_attachment to 0
+		on error errmess -- oops
+			log errmess -- log the error
+			set message_attachment to 1
+		end try
+		log "message_attachment = " & message_attachment
+		delay 10
+		send
+	end tell
+end tell
+
+tell application "Finder"
+	set folderPath to folder "Macintosh HD:Users:Jon:Documents:DocumentsAll:AttachFiles"
+	set theFile to first file in folderPath as alias
+	set fileName to name of theFile
+	
+	
+end tell
+
+set theSubject to "American Teacher Resume"
+set theBody to bodyTxt
+set theAddress to em6
+set theAttachment to theFile
+set theSender to "jpmail589@gmail.com"
+
+tell application "Mail"
+	set theNewMessage to make new outgoing message with properties {subject:theSubject, content:theBody & return & return, visible:true}
+	tell theNewMessage
+		set visibile to true
+		set sender to theSender
+		make new to recipient at end of to recipients with properties {address:theAddress}
+		try
+			make new attachment with properties {file name:theAttachment} at after the last word of the last paragraph
+			set message_attachment to 0
+		on error errmess -- oops
+			log errmess -- log the error
+			set message_attachment to 1
+		end try
+		log "message_attachment = " & message_attachment
+		delay 10
+		send
+	end tell
+end tell
