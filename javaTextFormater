@@ -1,0 +1,51 @@
+import javax.swing.JOptionPane;
+import java.util.*;
+import java.util.Formatter; 
+import java.io.File;
+
+class musicFormaterFinal{
+
+ 	public static void main(String[] args) {
+
+ 		String str = JOptionPane.showInputDialog("Enter youtube links");
+
+ 		String [] splitString= str.split(" ");
+
+ 		String x = " youtube-dl --extract-audio --audio-format mp3 ";
+
+ 		String y= "time"; 
+
+ 		for (int i = 0; i<splitString.length ; i++ ) {
+
+ 			y = (x + splitString[i]);
+ 			System.out.println(y);
+
+ 			
+ 		}
+
+ 		File file = new File("C:\\Users\\Jon\\Desktop\\blank.txt");
+
+ 		try{
+
+ 		Formatter myFile = new Formatter("C:\\Users\\Jon\\Desktop\\blank.txt");
+ 		myFile.format("%s"b, splitString[0], "\n");
+ 		myFile.format(splitString[1]);
+ 		myFile.format(splitString[2]);
+ 		myFile.close();
+}catch(Exception e){
+
+	System.out.println("bad");
+}
+
+ 		
+
+ 		//System.out.println("youtube-dl --extract-audio --audio-format mp3");
+		
+	}
+}
+
+
+
+
+
+
